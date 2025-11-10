@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>周子卿 Zhou Ziqing</title>
+  <meta name="description" content="周子卿个人主页 — 中英双语，极简黑白风格" />
+  <meta name="author" content="Zhou Ziqing" />
+  <style>
+    :root{--bg:#fff;--fg:#0b0b0b;--muted:#6b6b6b;--card-bg:rgba(0,0,0,0.03);--radius:12px;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg)}
+    .wrap{max-width:960px;margin:40px auto;padding:24px}
+    header{display:flex;justify-content:space-between;align-items:center}
+    .logo{font-weight:700;font-size:20px}
+    nav a{margin-left:16px;color:var(--muted);text-decoration:none}
+    nav a:hover{color:var(--fg)}
+    section{margin-top:40px;padding:24px;border-radius:var(--radius);background:var(--card-bg)}
+    h2{margin-top:0}
+    .list{display:flex;flex-direction:column;gap:12px}
+    .item{padding:8px 0}
+    .meta{color:var(--muted);font-size:14px}
+    footer{text-align:center;margin-top:32px;color:var(--muted);font-size:13px}
+    .fade-in{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
+    .fade-in.show{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="fade-in show">
+      <div class="logo">周子卿 / Zhou Ziqing</div>
+      <nav>
+        <a href="#about">关于 / About</a>
+        <a href="#edu">教育 / Education</a>
+        <a href="#works">经历 / Experience</a>
+        <a href="#contact">联系 / Contact</a>
+      </nav>
+    </header>
+
+    <section id="about" class="fade-in show">
+      <h2>关于我 / About Me</h2>
+      <p>周子卿（Zhou Ziqing），2002年9月生。韩国清州大学经济通商专业本科生，GPA 3.73/4.5（前5%）。性格活力强、悟性高，具备总结与复盘能力、全局意识，善于学习与思考。希望在外贸、市场拓展及国际业务领域实现个人价值。</p>
+    </section>
+
+    <section id="edu" class="fade-in show">
+      <h2>教育背景 / Education</h2>
+      <div class="list">
+        <div class="item">
+          <strong>清州大学（Cheongju University, Korea）</strong>
+          <div class="meta">经济通商学士（B.A. in Economics & Trade）<br>主修课程：国际商务、外贸电商、统计学、经济法、公司金融、期货、服务营销</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="fade-in show">
+      <h2>实习与工作经历 / Experience</h2>
+      <div class="list">
+        <div class="item">
+          <strong>内江农商银行 — 大堂经理实习（2023.7–2023.9）</strong>
+          <div class="meta">主动对接厅堂客户，精准挖掘储蓄及融资需求；客转率显著提升，获行长表扬。推动线上业务使用率，帮助50+客户开通并使用手机银行。优化厅堂话术与流程，提升响应效率30%。</div>
+        </div>
+        <div class="item">
+          <strong>四川智力嘉信建筑技术咨询有限公司（内江分公司）— 财务销售助理（2022.7–2022.9）</strong>
+          <div class="meta">协助施工图审查报告与财务对账，锤炼细节把控与沟通协调能力。参与高端客户面谈，积累商务谈判经验。</div>
+        </div>
+        <div class="item">
+          <strong>内江勘察设计协会 — 文员（2023.11–2024.2）</strong>
+          <div class="meta">负责文书资料整理与档案管理，锻炼逻辑与信息提炼能力。协助销售文案创作与素材整合，提升文案精准度。</div>
+        </div>
+        <div class="item">
+          <strong>中国义乌国际小商品博览会 & 广交会 — 项目助理</strong>
+          <div class="meta">协助境外客户（含土耳其客商）与中国箱包及汽车出口企业洽谈签单，支持B2B出口沟通与渠道拓展。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="fade-in show">
+      <h2>联系方式 / Contact</h2>
+      <p>📧 1095861093@qq.com<br>📱 172-6089-3213<br>📍 清州，韩国<br>💼 LinkedIn（可补充）</p>
+      <p>技能与兴趣：办公软件 / GPT / Web3 / 英语日常交流 / 篮球 / 钢琴 / 健身</p>
+    </section>
+
+    <footer class="fade-in show">© 2025 周子卿 Zhou Ziqing. All rights reserved.</footer>
+  </div>
+
+  <script>
+    // 简单进入动画
+    const els=document.querySelectorAll('.fade-in');
+    const io=new IntersectionObserver((es)=>{
+      es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+    },{threshold:0.1});
+    els.forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
